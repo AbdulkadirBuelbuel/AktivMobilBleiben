@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Container für das Menü */
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bgCircle {
+    width: 150px;
+    height: 150px;
+    background-color: #e7f9f8;
+    border-top-left-radius: 0; /* Keine Abrundung links oben */
+    border-top-right-radius: 0; /* Keine Abrundung rechts oben */
+    border-bottom-left-radius: 150px; /* Macht den unteren linken Bereich zum Viertelkreis */
+    border-bottom-right-radius: 0; /* Keine Abrundung rechts unten */
+}
+
+/* Styling für das Burger-Menü */
+.burger-menu {
+    padding-left: 50%;
+    padding-top: 30%;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.burger-menu span {
+    height: 3px;
+    background-color: #1a355a;
+    border-radius: 2px;
+
+}
+
+/* Styling für die einzelnen Linien */
+.burger-menu #up {
+    width: 75%;
+}
+
+.burger-menu #middle {
+    width: 100%;
+}
+
+.burger-menu #down {
+    width: 55%;
+}
