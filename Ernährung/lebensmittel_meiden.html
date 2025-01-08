@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebensmittel Meiden</title>
+    <link rel="stylesheet" href="meiden_styles.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <h1>Lebensmittel Meiden</h1>
+        <div class="carousel">
+            <button class="arrow left">←</button>
+            <div class="circle-container">
+                <div class="circle small">Fettige Lebensmittel</div>
+                <div class="circle small">Verarbeitete Lebensmittel</div>
+                <div class="circle big" onclick="showPopup()">Hoher Transfettanteil</div>
+                <div class="circle small">Alkohol</div>
+                <div class="circle small">Künstliche Zusätze</div>
+            </div>
+            <button class="arrow right">→</button>
+        </div>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p>
+                    Margarine<br>
+                    Pommes Frites und andere frittierte Lebensmittel<br>
+                    Backwaren und Snacks die teilweise hydrierte Öle enthalten
+                </p>
+                <button class="close-button" onclick="hidePopup()">×</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
