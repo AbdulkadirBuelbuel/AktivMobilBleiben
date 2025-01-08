@@ -1,0 +1,104 @@
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sauce One', sans-serif;
+    background-color: #f9ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #3a7d7c;
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid #a8dbd9;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #3a7d7c;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #3a7d7c;
+}
+
+.card .button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff5f8f;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card .button-secondary {
+    background-color: #3a7d7c;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #a8dbd9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.progress-circle span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3a7d7c;
+}
+
+.progress-circle::before {
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid #ff5f8f;
+    clip-path: inset(50% 0 0 0);
+}
