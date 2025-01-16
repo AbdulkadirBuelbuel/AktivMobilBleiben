@@ -1,0 +1,142 @@
+/* Allgemeines Styling */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sauce One', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1a355a;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #42c4c1;
+}
+
+/* Suchleiste */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #e0eff1;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+main {
+    margin-top: 10%;
+}
+
+/* Neuer Container für den Streifen */
+.exercise-section {
+    width: 100%;
+    background-color: #81dce2; /* Streifenfarbe */
+    padding: 75px 0; /* Vertikaler Abstand */
+    display: flex;
+    justify-content: center;
+}
+
+/* Grid bleibt zentriert */
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    row-gap: 25%;
+    column-gap: 50%;
+    justify-items: center;
+    justify-content: center;
+}
+
+/* Karten-Design */
+.exercise-card {
+    width: 150px;
+    height: 120px;
+    background-color: #d7e4e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+}
+
+.exercise-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.exercise-card p {
+    font-weight: bold;
+    color: #1a355a;
+}
+
+/* Navigation mit Pfeilen */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.nav-button {
+    background-color: #81dce2;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #1a355a;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #42c4c1;
+}
+
+/* Punkte (Dots) */
+.dots {
+    display: flex;
+    gap: 25px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #ff69b4;
+}

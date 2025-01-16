@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alle Übungen</title>
+    <link rel="stylesheet" href="uebungen.css">
+    <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
+    <link rel = "stylesheet" href = "../menu.css">
+</head>
+
+<body>
+    <!-- Header mit Titel und Suchleiste -->
+    <header>
+        <h1>Alle Übungen</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Suchbegriff eingeben...">
+            <button class="search-button">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Container für den Streifen -->
+        <section class="exercise-section">
+            <div class="exercise-grid">
+                <div class="exercise-card">
+                    <img src="icons/alltag.svg" alt="Alltagsübungen">
+                    <p>Alltagsübungen</p>
+                </div>
+                <div class="exercise-card">
+                    <img src="icons/dehnung.svg" alt="Dehnübungen">
+                    <p>Dehnübungen</p>
+                </div>
+                <div class="exercise-card">
+                    <img src="icons/mobilitaet.svg" alt="Mobilitätsübungen">
+                    <p>Mobilitätsübungen</p>
+                </div>
+                <div class="exercise-card">
+                    <img src="icons/kraft.svg" alt="Kraftübungen">
+                    <p>Kraftübungen</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation mit linken und rechten Pfeilen -->
+        <div class="navigation">
+            <button class="nav-button" id="prev-content">⬅</button> <!-- Linker Pfeil -->
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="nav-button" id="next-content">➡</button> <!-- Rechter Pfeil -->
+        </div>
+    </main>   
+
+    <script src = "../menu.js"></script>
+    <script src= "script.js"></script>
+</body>
+
+</html>
