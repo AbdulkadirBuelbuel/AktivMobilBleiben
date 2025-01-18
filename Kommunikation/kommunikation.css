@@ -1,0 +1,130 @@
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sauce One', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  font-size: 24px;
+  color: #5ec3c8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#menu-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: #5ec3c8;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Seiteninhalt */
+main {
+  height: 100vh;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.page {
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 80px;
+}
+
+.page.active {
+  display: flex;
+}
+
+/* Karten */
+.card {
+  width: 80%;
+  max-width: 400px;
+  background-color: #fff;
+  border: 2px solid #1a2b3c;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 36px;
+}
+
+.card h2 {
+  font-size: 18px;
+  color: #1a2b3c;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Notfallbutton */
+.emergency-button {
+  background-color: #e91e63;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.emergency-button:hover {
+  background-color: #c2185b;
+}
+
+/* Scrollbar */
+.scrollbar {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 100px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.scroll-thumb {
+  width: 6px;
+  height: 50px;
+  background-color: #e91e63;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
