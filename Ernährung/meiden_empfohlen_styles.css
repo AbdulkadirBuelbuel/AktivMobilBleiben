@@ -1,0 +1,163 @@
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+
+/* ---------- Globales Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sauce One', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a2b3c;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Header ---------- */
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #5ec3c8;
+}
+
+/* ---------- Scrollbares Karussell ---------- */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  padding: 120px 20px 20px;
+  width: 100%;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  justify-content: center;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Kreise mit Karussell-Effekt ---------- */
+.circle {
+  width: 180px;
+  height: 180px;
+  background-color: #42526E;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.5s, opacity 0.5s;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.circle.active {
+  transform: scale(1.4);
+  opacity: 1;
+  background-color: #1a2b3c;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* ---------- Navigation Buttons unterhalb und zentriert ---------- */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 250px; /* Abstand zwischen den Pfeilen */
+  margin-top: 50px; /* Abstand zum Karussell */
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  color: #e91e63;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: scale(1.2);
+}
+
+  
+/* ---------- Popup ---------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.popup {
+  position: relative; /* Bezugspunkt für den Close-Button */
+  background-color: #d0e0e3;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup p {
+  font-size: 16px;
+  color: #1a2b3c;
+}
+
+/* ---------- Schließen-Button im Popup ---------- */
+.close-button {
+  position: absolute; /* Position relativ zum Popup */
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #e91e63;
+  transition: transform 0.2s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+  color: #ff1744;
+}
+
+/* ---------- Animation ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

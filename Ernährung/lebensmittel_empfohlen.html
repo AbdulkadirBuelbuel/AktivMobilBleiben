@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empfohlene Lebensmittel</title>
+  <link rel="stylesheet" href="meiden_empfohlen_styles.css">
+  <link rel="stylesheet" href="../menu.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Empfohlene Lebensmittel</h1>
+  </header>
+
+  <!-- Karussell mit Kreisen -->
+  <main>
+    <section class="scroll-container">
+      <div class="circle" data-info="Milchprodukte<br>Grünes Blattgemüse wie Brokkoli und Grünkohl<br>Kalziumangereicherte pflanzliche Milchsorten">Kalziumreiche Lebensmittel</div>
+      <div class="circle" data-info="Fettiger Fisch<br>Eigelb<br>Vitamin D-angereicherte Lebensmittel">Vitamin D-reiche Lebensmittel</div>
+      <div class="circle" data-info="Beispielsweise Fisch wie Lachs, Makrele und Sardinen, die entzündungshemmende Eigenschaften haben.">Lebensmittel reich an Omega-3-Fettsäuren</div>
+      <div class="circle" data-info="Rosmarin, Salbei, Basilikum, Petersilie, Oregano, Schnittlauch, Thymian | Liebstöckel, Koriander, Dill, Kurkuma, Ingwer, Zimt">Kräuter und Gewürze</div>
+      <div class="circle" data-info="Cashewnüsse<br>Walnüsse<br>Haselnüsse<br>Mandeln">Nüsse</div>
+      <div class="circle" data-info="Olivenöl<br>Weizenkeimöl<br>Walnussöl<br>Leinöl<br>Rapsöl">Öle</div>
+      <div class="circle" data-info="Äpfel<br>Erdbeeren<br>Himbeeren<br>Heidelbeeren<br>Brombeeren<br>Zitrusfrüchte<br>Pfirsiche<br>Blaue Trauben<br>Sauerkirschen<br>Plaumen">Früchte</div>
+      <div class="circle" data-info="Zwiebell<br>Knoblauch<br>Radieschen<br>Brokkoli<br>Rettich<br>Meerrettich<br>Gurken<br>Zucchini<br>Spargel<br>Spinat">Gemüse</div>
+      <div class="circle" data-info="Vollkornprodukte wie brauner Reis, Vollkornbrot, Hafer">Vollkörner und Ballaststoffe</div>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button id="prev-button" class="icon-button nav-button">←</button>
+        <button id="next-button" class="icon-button nav-button">→</button>
+    </div>
+  </main>
+
+  <!-- Overlay und Popup -->
+  <div id="overlay" class="overlay">
+    <div id="info-popup" class="popup">
+      <button id="close-popup" class="icon-button close-button">✖</button>
+      <p id="popup-text">Hier erscheinen die Details...</p>
+    </div>
+  </div>
+
+  <script src="../menu.js"></script>
+  <script src="meiden_empfohlen.js"></script>
+</body>
+</html>

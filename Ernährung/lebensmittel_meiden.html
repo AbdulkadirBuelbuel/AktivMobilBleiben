@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebensmittel Meiden</title>
-    <link rel="stylesheet" href="meiden_styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lebensmittel Meiden</title>
+  <link rel="stylesheet" href="meiden_empfohlen_styles.css">
+  <link rel="stylesheet" href="../menu.css">
 </head>
 <body>
-    <header></header>
 
-    <main>
-        <h1>Lebensmittel Meiden</h1>
-        <div class="carousel">
-            <button class="arrow left">←</button>
-            <div class="circle-container">
-                <div class="circle small">Fettige Lebensmittel</div>
-                <div class="circle small">Verarbeitete Lebensmittel</div>
-                <div class="circle big" onclick="showPopup()">Hoher Transfettanteil</div>
-                <div class="circle small">Alkohol</div>
-                <div class="circle small">Künstliche Zusätze</div>
-            </div>
-            <button class="arrow right">→</button>
-        </div>
+  <!-- Header -->
+  <header>
+    <h1>Lebensmittel Meiden</h1>
+  </header>
 
-        <div class="popup" id="popup">
-            <div class="popup-content">
-                <p>
-                    Margarine<br>
-                    Pommes Frites und andere frittierte Lebensmittel<br>
-                    Backwaren und Snacks die teilweise hydrierte Öle enthalten
-                </p>
-                <button class="close-button" onclick="hidePopup()">×</button>
-            </div>
-        </div>
-    </main>
+  <!-- Karussell mit Kreisen -->
+  <main>
+    <section class="scroll-container">
+      <div class="circle" data-info="Bier, Spirituosen, Wein">Alkohol</div>
+      <div class="circle" data-info="Margarine, Pommes Frites, Backwaren mit gehärteten Ölen">Hoher Transfettanteil</div>
+      <div class="circle" data-info="Fast Food, Fertiggerichte, Chips">Verarbeitete Lebensmittel</div>
+      <div class="circle active" data-info="Süßigkeiten, Energy Drinks, Kuchen">Zuckerhaltige Lebensmittel</div>
+      <div class="circle" data-info="Sonnenblumenöl, Palmöl">Bestimmte Öle und Fette</div>
+      <div class="circle" data-info="Weißbrot, Weißer Reis, Teigwaren">Raffinierte Kohlenhydrate</div>
+      <div class="circle" data-info="Rindfleisch, Wurstwaren, Speck">Rotes Fleisch und Fleischwaren</div>
+      <div class="circle" data-info="Vollfettmilch, Cremeprodukte">Einige Milchprodukte</div>
+      <div class="circle" data-info="Aspartam, künstliche Farbstoffe, Konservierungsstoffe">Künstliche Zusatzstoffe</div>
+    </section>
 
-    <script>
-        function showPopup() {
-            document.getElementById('popup').style.display = 'flex';
-        }
+    <!-- Navigation Buttons unter dem Karussell -->
+    <div class="nav-buttons">
+      <button id="prev-button" class="icon-button nav-button">←</button>
+      <button id="next-button" class="icon-button nav-button">→</button>
+    </div>
+  </main>
 
-        function hidePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
+  <!-- Overlay und Popup -->
+  <div id="overlay" class="overlay">
+    <div id="info-popup" class="popup">
+      <button id="close-popup" class="icon-button close-button">✖</button>
+      <p id="popup-text">Hier erscheinen die Details...</p>
+    </div>
+  </div>
+
+  <script src = "../menu.js"></script>
+  <script src="meiden_empfohlen.js"></script>
 </body>
 </html>

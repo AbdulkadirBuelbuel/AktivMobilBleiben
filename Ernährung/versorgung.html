@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versorgung</title>
+  <link rel="stylesheet" href="versorgung.css">
+  <link rel="stylesheet" href="../menu.css">
+</head>
+<body>
+
+  <header>
+    <h1>Versorgung</h1>
+  </header>
+
+  <main>
+    <section class="card-container">
+      <div class="card" id="rezepte">
+        <img src="chef-icon.svg" alt="Rezeptvorschläge">
+        <p>Rezeptvorschläge</p>
+      </div>
+      <div class="card" id="lebensmittel">
+        <img src="food-icon.svg" alt="Lebensmittel">
+        <p>Lebensmittel</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../menu.js"></script>
+  <script>
+    // Navigation auf der Startseite
+    const navigateTo = (id, url) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.addEventListener('click', () => {
+          window.location.href = url;
+        });
+      }
+    };
+
+    navigateTo('lebensmittel', 'lebensmittel.html');
+    navigateTo('rezepte', '#');
+  </script>
+</body>
+</html>
