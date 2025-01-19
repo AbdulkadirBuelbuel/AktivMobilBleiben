@@ -13,6 +13,39 @@
     align-items: center;
 }
 
+/* Dropdown-Menü Styling */
+.menu-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 20px 0 0 0;
+    background-color: #e7f9f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 150px; /* Unter dem Burger-Menü */
+    right: 0;
+    width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.menu-list li {
+    padding: 12px 16px;
+    color: #1a355a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-list li:hover {
+    background-color: #b2e5ea;
+}
+
+/* Menü anzeigen, wenn aktiv */
+.menu-list.active {
+    display: block;
+}
+
+
 #bgCircle {
     width: 150px;
     height: 150px;
