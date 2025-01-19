@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stelle jetzt eine Frage</title>
+  <link rel="stylesheet" href="fragen.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Stelle jetzt eine Frage</h1>
+  </header>
+
+  <!-- Fragebereich -->
+  <main>
+    <section class="question-container">
+      <div class="question-box">
+        <p>Wie kann ich dir helfen?</p>
+        <input type="text" id="user-question" placeholder="Tippe Deine Frage ein">
+        <button id="send-button" class="send-button hidden">Frage senden</button>
+      </div>
+
+      <!-- Navigations-Buttons -->
+      <div class="button-group">
+        <button class="back-button" onclick="goBack()">Zurück</button>
+        <button class="home-button" onclick="goHome()">Home</button>
+      </div>
+    </section>
+
+    <!-- Arzt-Icon -->
+    <img src="doctor-icon.png" alt="Arzt" class="doctor-icon">
+  </main>
+
+  <!-- Popup-Overlay -->
+  <div id="popup-overlay" class="popup-overlay hidden">
+    <div class="popup-content">
+      <button id="close-popup" class="close-popup">✖</button>
+      <p>Deine Frage wurde<br>erfolgreich versendet!<br>Du erhältst bald eine Antwort.</p>
+      <button id="popup-back-button" class="popup-back-button">Zurück zur Übersicht</button>
+    </div>
+  </div>
+
+  <script src="faq.js"></script>
+</body>
+</html>

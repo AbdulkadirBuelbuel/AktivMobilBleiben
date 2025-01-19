@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livechat</title>
+  <link rel="stylesheet" href="livechat.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>LIVECHAT</h1>
+  </header>
+
+  <!-- Chatbereich -->
+  <main>
+    <div class="chat-container">
+      <!-- Nachricht vom Arzt -->
+      <div class="chat-message doctor">
+        <img src="doctor-icon.png" alt="Arzt">
+        <div class="speech-bubble doctor-bubble">
+          Hallo Sabine, wie geht es Dir heute?<br>
+          Hast Du Fragen oder möchtest Du etwas mit mir besprechen?
+        </div>
+      </div>
+
+      <!-- Button für Nachricht verfassen -->
+      <button id="write-message" class="write-button" onclick="showUserMessage()">Nachricht verfassen..</button>
+    </div>
+  </main>
+
+  <!-- Zurück-Button fest unterhalb des Chats -->
+  <div class="footer">
+    <button class="back-nav" onclick="goBack()">Zurück</button>
+  </div>
+
+  <script src="livechat.js"></script>
+</body>
+</html>

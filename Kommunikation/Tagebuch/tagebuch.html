@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tagebuch</title>
+  <link rel="stylesheet" href="tagebuch.css">
+</head>
+<body>
+
+  <!-- Header mit Fortschrittsbalken -->
+  <header>
+    <div class="progress-container">
+      <span id="progress-text">1/6</span>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+    <h1>Tagebuch</h1>
+  </header>
+
+  <!-- Hauptbereich für die Fragen -->
+  <main id="question-container">
+    <!-- Frage 1 -->
+    <section class="question active">
+      <p>Wie geht es dir heute?</p>
+      <div class="emoji-container">
+        <span>😊</span>
+        <span>😐</span>
+        <span>☹️</span>
+      </div>
+      <div class="navigation-buttons">
+        <button onclick="previousQuestion()">Zurück</button>
+        <button onclick="nextQuestion()">Nächste Frage</button>
+      </div>
+    </section>
+
+    <!-- Frage 2 -->
+    <section class="question">
+      <p>Wie stark sind deine Schmerzen?</p>
+      <input type="range" min="1" max="10" value="5" class="slider">
+      <div class="range-labels">
+        <span>kaum spürbar</span>
+        <span>sehr stark</span>
+      </div>
+      <div class="navigation-buttons">
+        <button onclick="previousQuestion()">Zurück</button>
+        <button onclick="nextQuestion()">Nächste Frage</button>
+      </div>
+    </section>
+
+    <!-- Frage 3 -->
+    <section class="question">
+      <p>Wie weit kannst du ohne Schmerzen gehen?</p>
+      <input type="range" min="1" max="10" value="5" class="slider">
+      <div class="range-labels">
+        <span>Ohne Beschwerden</span>
+        <span>Unerträgliche Schmerzen</span>
+      </div>
+      <div class="navigation-buttons">
+        <button onclick="previousQuestion()">Zurück</button>
+        <button onclick="nextQuestion()">Nächste Frage</button>
+      </div>
+    </section>
+
+    <!-- Frage 4 -->
+    <section class="question">
+      <p>Nimmst du regelmäßig Schmerzmittel ein?</p>
+      <div class="button-group">
+        <button onclick="nextQuestion()">Ja</button>
+        <button onclick="nextQuestion()">Nein</button>
+      </div>
+      <div class="navigation-buttons">
+        <button onclick="previousQuestion()">Zurück</button>
+        <button onclick="nextQuestion()">Nächste Frage</button>
+      </div>
+    </section>
+
+    <!-- Frage 5 -->
+    <section class="question">
+      <p>Welche Medikamente nimmst du ein?</p>
+      <input type="text" placeholder="Trage deine Medikamente ein">
+      <div class="navigation-buttons">
+        <button onclick="previousQuestion()">Zurück</button>
+        <button onclick="nextQuestion()">Nächste Frage</button>
+      </div>
+    </section>
+
+    <!-- Letzte Seite -->
+    <section class="question">
+      <p>Super! Wir sind fertig für heute. Möchtest du noch etwas dokumentieren?</p>
+      <div class="button-group">
+        <button onclick="restart()">Ja</button>
+        <button onclick="goHome()">Nein</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="tagebuch.js"></script>
+</body>
+</html>

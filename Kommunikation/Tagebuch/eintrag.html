@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tagebucheintrag</title>
+  <link rel="stylesheet" href="eintrag.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Tagebucheintrag</h1>
+  </header>
+
+  <!-- Eintrag Bereich -->
+  <main>
+    <section class="entry-container">
+      <div class="entry-box">
+        <p>Du bestimmst, was hier Platz findet</p>
+        <textarea id="user-entry" placeholder="Schreibe hier deinen Eintrag..."></textarea>
+      </div>
+      <button id="finish-button" class="finish-button">Tagebuch beenden</button>
+    </section>
+
+    <!-- Popup -->
+    <div id="success-popup" class="popup">
+      <button id="close-popup" class="close-popup">✖</button>
+      <p><strong>Geschafft!</strong><br> Toll, dass du dranbleibst.</p>
+      <button class="popup-button" onclick="goToCommunication()">Kommunikation</button>
+      <button class="popup-home" onclick="goHome()">Home</button>
+    </div>
+
+    <!-- Arzt-Icon -->
+    <img src="doctor-icon.png" alt="Arzt" class="doctor-icon">
+  </main>
+
+  <script src="eintrag.js"></script>
+</body>
+</html>

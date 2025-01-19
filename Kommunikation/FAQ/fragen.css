@@ -1,0 +1,210 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #ffffff;
+  color: #1a2b3c;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background-color: #5ec3c8;
+  padding: 20px;
+  text-align: left;
+  font-size: 24px;
+  color: white;
+  position: relative;
+  border-top-right-radius: 50px;
+}
+
+#menu-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Frage Container */
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+/* Fragebox */
+.question-box {
+  background-color: #d0e0e3;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Eingabefeld */
+#user-question {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #5ec3c8;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* "Frage senden" Button */
+.send-button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #c2185b;
+}
+
+/* Button ausblenden */
+.hidden {
+  display: none;
+}
+
+/* Navigations-Buttons */
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.back-button, .home-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button {
+  background-color: #5ec3c8;
+}
+
+.back-button:hover {
+  background-color: #49a3a7;
+}
+
+.home-button {
+  background-color: #e91e63;
+}
+
+.home-button:hover {
+  background-color: #c2185b;
+}
+
+/* Arzt-Icon */
+.doctor-icon {
+  width: 80px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparenter Hintergrund */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Über allen anderen Elementen */
+  }
+  
+  /* Popup Inhalt */
+  .popup-content {
+    background-color: #1a2b3c; /* Dunkler Hintergrund */
+    color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    font-size: 18px;
+    line-height: 1.5;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Schließen-Button */
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #e91e63;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .close-popup:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Button im Popup */
+  .popup-back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #5ec3c8;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-back-button:hover {
+    background-color: #49a3a7;
+  }
+  
+  /* Popup ausblenden */
+  .hidden {
+    display: none;
+  }
+  
+  /* Animation für sanftes Einblenden */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }  
